@@ -13,7 +13,7 @@ async def read_index() -> str:
       </head>
       <body>
         <h1>Welcome</h1>
-        <p>Open the interactive API docs at <a href="http://0.0.0.0:8080/docs">http://0.0.0.0:8080/docs</a>.</p>
+        <p>Open the interactive API docs at http://URL/docs.</p>
       </body>
     </html>
     """
@@ -21,4 +21,4 @@ async def read_index() -> str:
 
 @app.get("/hello_world")
 async def read_root() -> dict[str, str]:
-    return {"message": "hello world 💡"}
+    return {"message": "hello world"}
