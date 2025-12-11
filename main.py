@@ -19,11 +19,11 @@ async def read_index() -> str:
     """
 
 
-from datetime import datetime
-@app.get("/current_time")
-async def get_current_time() -> dict[str, str]:
-    now = datetime.now()
-    return {
-        "current_time": now.strftime("%Y-%m-%d %H:%M:%S"),
-        "timezone": "Asia/Tokyo"
-    }
+@app.get("/double/{number}")
+async def double_number(number: int) -> dict[str, int]:
+return {
+"input": number,
+"result": number * 2
+}
+
+
